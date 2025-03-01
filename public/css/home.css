@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
+
+body{
+    font-family: "Anuphan", sans-serif;
+    font-style: normal;
+    background-image: url('../uploaded_img/b.png'); /* เปลี่ยนเป็น URL ของไฟล์รูปภาพที่คุณต้องการใช้เป็นพื้นหลัง */
+    background-size: cover; /* ปรับขนาดของรูปภาพให้เต็มพื้นที่ของหน้าจอ */
+    background-repeat: no-repeat; /* ป้องกันการทับซ้ำของรูปภาพ */
+    background-position: center; /* จัดตำแหน่งของรูปภาพให้อยู่ตรงกลางของหน้าจอ */
+}
+
+h5{
+    color: white;
+    font-size: 45px;
+}
+
+h6{
+    color: white;
+    font-size: 14px;
+}
+
+.container {
+    width: 60%;
+    white-space: nowrap; /* หยุดการขึ้นบรรทัดใหม่ของการ์ด */
+    overflow-x: auto; /* เพิ่มแถบเลื่อนในแนวนอนเมื่อเนื้อหาเกินขนาด */
+  }
+  
+  .card {
+    display: inline-block; /* จัดการ์ดให้อยู่ในบรรทัดเดียวกัน */
+    vertical-align: top; /* จัดการ์ดให้อยู่ด้านบนของแถบเลื่อน */
+  }
+
+  .navbar {
+    background-color: black; /* สีพื้นหลังของแถบ navbar */
+    color: white; /* สีข้อความ */
+    padding: 30px 0; /* ระยะห่างของขอบบนและล่างของแถบ navbar */
+  }
+  
+  .container_h {
+    width: 100%; /* กำหนดความกว้างของ container */
+    margin: 0 auto; /* จัดแสดง container ตรงกลาง */
+  }
+  
+  h3 {
+    text-align: center;
+    font-size: 45px;
+    margin: 0 auto; /* ลบระยะขอบของข้อความ */
+  }
+
+  .footer {
+   
+    padding: 20px 0; /* ระยะห่างขอบบนและล่างของ footer */
+    text-align: center; /* จัดให้เนื้อหาอยู่ตรงกลาง */
+  }
+
+  .custom-button {
+    background-color: #fed330; /* สีน้ำตาล */
+    color: black; /* สีของตัวอักษร */
+    border: none; /* ไม่มีเส้นขอบ */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+    display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    margin: 4px 2px; /* ระยะห่างของขอบ */
+    cursor: pointer; /* ปลายเมาส์แสดงเป็นปุ่ม */
+    border-radius: 8px; /* มุมโค้งขอบ */
+  }
+  
+  .card_header {
+    color: black; /* กำหนดสีตัวอักษร */
+    font-size: 70px;
+    font-weight: 700;
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    margin: 0 auto; /* จัดข้อความตรงกลาง */
+}

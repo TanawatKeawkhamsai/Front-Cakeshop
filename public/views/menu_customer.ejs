@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+    <header>
+        <h1>🎂 CAKE SHOP 🍰</h1>
+        <nav>
+            <ul>
+                <li><a href="/menu_customer">Menu</a></li>
+                <li><a href="/about">About Shop</a></li>
+                <li><a href="/logout">Log out</a></li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+        <div class="card-header">
+            <center><h3>Our Menu</h3></center>
+        </div>
+    <br>
+
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <% for (let i = 0; i < Cake.length; i++) { %>
+                        <div class="col-lg-4 mb-4">
+                            <div class="card">
+                                <img class="card-img-top" src="../uploaded_img/<%= Cake[i].img %>" alt="Card image cap">
+                                <div class="card-body">
+                                    <form action="/menu_customer" method="post">
+                                        <h5 class="card-title" name="cake_name"><%= Cake[i].cake_name %></h5>
+                                        <input type="text" name="customer_id" value="<%=user.customer_id%>" hidden>
+                                        <p class="card-text" name="cake_price">Price: <%= Cake[i].cake_price %></p>
+                                        <input type="hidden" name="cake_id" value="<%= Cake[i].cake_id %>">
+                                        <input type="number" name="qty" class="qty form-control" min="0" max="99" value="0">
+                                        <br>
+                                        <div class="d-flex justify-content-center mt-2">
+                                            <button type="submit" class="btn-add-to-cart">Add to cart 🛒</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>
