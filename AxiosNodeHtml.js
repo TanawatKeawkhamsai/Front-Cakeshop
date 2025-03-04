@@ -426,7 +426,18 @@ app.post("/edit_customer/:id",async (req, res) => {
 }
 );
 
+//------------------------------------------------------------------------------------------
 
+// about
+app.get("/about", async (req, res) => {
+  try {
+    const response = await axios.get(base_url + "/Employee/");
+    res.render("about", { Employee: response.data });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("error");
+  }
+});
 
 app.listen(5500, () => {
     console.log("server started on port 5500");

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/about.css"/>
+    <title>About Us</title>
+</head>
+<body>
+    <header><center>
+        <a href="/menu_customer">
+           <img src="../images/home.png" alt="Home" width="50" height="50">
+        </a>
+        </center>
+        </header>
+     
+        <center>
+           <h1>About Us</h1>
+        </center>
+     
+        <section class="reviews">
+           <% for (let i = 0; i < Employee.length; i++) { %>
+           <center><h2 class="title"></h2></center>
+                 <div>
+                    <img src="uploaded_img\icon\icon-employee.png" alt="Profile Icon">
+                    <h3><%= Employee[i].employee_username %></h3>
+                    <p><%= Employee[i].phone %></p>
+                 </div>
+           <% } %>
+        </section>
+</body>
+</html>
