@@ -11,64 +11,62 @@ body {
 
 .container {
     text-align: center;
-    border: 2px solid #880e4f;
-    padding: 30px;
+    border: 2px solid #880e4f; /* เปลี่ยนสีกรอบเป็นสีเหลือง */
+    padding: 40px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 350px;
+}
+
+.profile-icon img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #ad1457; /*กรอบไอคอน*/
+}
+
+.form-container {
+    margin-top: 10px;
+    text-align: left;
 }
 
 h2 {
+    text-align: center;
     margin-bottom: 20px;
-    color: black;
 }
 
-.form-group {
-    margin-bottom: 15px;
-    text-align: left;
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 label {
     font-weight: bold;
+    margin-bottom: 5px;
 }
 
 input {
-    padding: 10px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     width: 100%;
 }
 
-.password {
-    -webkit-text-security: disc;
-}
-
-.custom-button {
+button {
     padding: 10px;
-    background-color: #ad1457;
+    background-color: #ad1457; /*ปุ้มOK*/
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    width: 100%;
-    margin-top: 10px;
 }
 
-.custom-button:hover {
-    background-color: #880e4f;
-}
-
-/* ปรับให้ "Back to Login" อยู่ข้างล่างกรอบ */
 .back-link {
+    display: block;
     margin-top: 15px;
-    color: black;
+    text-align: center;
+    color: #880e4f;
     text-decoration: none;
     font-weight: bold;
-    transition: all 0.3s ease-in-out;
-}
-
-.back-link:hover {
-    text-decoration: underline;
-    text-decoration-color: #ad1457;
 }

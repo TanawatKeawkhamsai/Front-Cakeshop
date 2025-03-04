@@ -6,8 +6,8 @@ body{
 }
 
 .custom-button {
-  background-color: #fed330; /* สีน้ำตาล */
-  color: black; /* สีของตัวอักษร */
+  background-color: #ad1457; /* สีน้ำตาล */
+  color: white; /* สีของตัวอักษร */
   border: none; /* ไม่มีเส้นขอบ */
   padding: 10px 20px; /* ระยะห่างภายใน */
   text-align: center; /* จัดข้อความตรงกลาง */
@@ -36,5 +36,5 @@ a {
 }
 
 a:hover {
-  border-bottom-color: #fed330;
+  border-bottom-color: #ad1457;
 }

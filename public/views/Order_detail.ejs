@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Details</title>
+    <link rel="stylesheet" href="/css/Order_detail.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📋 Order Details</h1>
+
+        <h2>รายละเอียดข้อมูลที่ลูกค้าสั่ง</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Customer ID</th>
+                    <th>Customer Name</th>
+                    <th>Cake ID</th>
+                    <th>Cake Name</th>
+                    <th>Quantity</th>
+                    <th>Total Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if (OrderDetails.length > 0) { %>
+                    <% OrderDetails.forEach(order => { %>
+                        <tr>
+                            <td><%= Order.CustomerID %></td>
+                            <td><%= Order.CustomerName %></td>
+                            <td><%= Order.CakeID %></td>
+                            <td><%= Order.CakeName %></td>
+                            <td><%= Order.Quantity %></td>
+                            <td><%= Order.TotalPrice %></td>
+                            <td>
+                                <button class="accept-btn">Accept</button>
+                            </td>
+                        </tr>
+                    <% }); %>
+                <% } else { %>
+                    <tr>
+                        <td colspan="7">ไม่มีข้อมูลคำสั่งซื้อ</td>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+        
+        <a href="/Orders" class="back-btn">🔙 Back to Orders</a>
+    </div>
+</body>
+</html>

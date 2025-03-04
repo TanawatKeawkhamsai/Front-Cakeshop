@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Menu</title>
+    <link rel="stylesheet" href="../css/addmenu.css" />
+</head>
+<body>
+    <br>
+    <div class="card-body">
+        <h5 class="card-title">Add Menu</h5>
+        <div class="form-group" enctype="multipart/form-data">
+            <form action="/Add_menu" method="post" enctype="multipart/form-data">
+                <label for="cake_name">Cake Name</label>
+                <input type="text" name="cake_name" placeholder="cake name" />
+                <br><br>
+                <label for="cake_price">Price</label>
+                <input type="text" class="form-control" name="cake_price" placeholder="price" pattern="[0-9]{1,7}" required >
+                <br><br>
+                <label for="cake_size">Size</label>
+                <input type="text" class="form-control" name="cake_size" placeholder="size" pattern="[0-9]{1,7}" required >
+                <br><br>
+                <label for="img">Image</label>
+                <input type="file" name="img">
+                <input type="submit" value="OK">
+            </form>
+        </div>
+    </div>
+    <br>
+    <center><a href="/menu_employee">Back to List</a></center>
+</body>
+</html>

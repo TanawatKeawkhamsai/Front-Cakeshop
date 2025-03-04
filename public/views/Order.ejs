@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders List</title>
+    <link rel="stylesheet" href="/css/Order_detail.css">
+</head>
+<body>
+    <h1>รายการสั่งซื้อ</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Order Date</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+      <% Order.forEach(Order => {%>
+        <tr>
+            <td><%= Order.Order_id  %></td>
+            <td><%= Order.Order_Date  %></td>
+            <td><%= Order.Status  %></td>
+            <td><a href="/Order_detail/<%= Order.Order_id %>" class="view-btn">ดูรายละเอียดสินค้่า</a></td>
+        </tr>
+        <%});%>
+    </tbody>
+    </table>
+</body>
+</html>

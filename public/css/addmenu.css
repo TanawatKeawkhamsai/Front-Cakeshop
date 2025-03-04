@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
+
+body{
+    font-family: "Anuphan", sans-serif;
+    font-style: normal;
+    font-size: medium;
+}
+.card-body {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #fed330;
+    border-radius: 5px;
+  }
+  
+  .card-title {
+    font-family: "Anuphan", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="file"],
+  .form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+  }
+  
+  .btn-primary {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #fed330;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: white;
+  }
+
+  a {
+    display: inline-block;
+    margin: 10px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.2s;
+  }
+  
+  a:hover {
+    border-bottom-color: #fed330;
+  }
+  
+  img {
+    width: 120px; /* กำหนดความกว้างของรูปภาพ */
+    height: auto; /* ทำให้ความสูงของรูปภาพปรับให้สัดส่วน */
+  }
+  

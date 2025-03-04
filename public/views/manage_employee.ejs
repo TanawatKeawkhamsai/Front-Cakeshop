@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/customer.css" />
+    <title>Employee's Information</title>
+  </head>
+  <body>
+    <br><br>
+    <div class="head">
+      <div class="spacer"></div> <!-- เพิ่มพื้นที่ว่าง -->
+      <a href="/Add_employee" class="btn">➕ Add Employee</a>
+    </div>
+    <h1>Employee's Information</h1>
+    <% for(var i = 0; i < Employee.length; i++){%>
+    <form method="post" action="/manage_employee">
+    <div class=username>
+        <label for="username">Username : </label>
+        <p> <%=Employee[i].employee_username%></p>
+        <label for="password">Password : </label>
+        <p> <%=Employee[i].employee_password%></p>
+        <label for="phone">Phone : </label>
+        <p> <%=Employee[i].phone%></p>
+    </div>
+    <br />
+    <a href="/edit_employee/<%= Employee[i].employee_id%>">Edit</a>
+    <a href="/delete_employee/<%= Employee[i].employee_id%>">Delete</a>
+    </form>
+    <br><br>
+    <%}%>
+        <center><a href="/menu_employee">Back to Menu</a></center>
+      </body>
+    </html>

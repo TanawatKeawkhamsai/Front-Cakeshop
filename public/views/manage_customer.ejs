@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/customer.css" />
+    <title>Customer's Information</title>
+  </head>
+  <body>
+    <br><br>
+    <div class="head">
+      <div class="spacer"></div> <!-- เพิ่มพื้นที่ว่าง -->
+    </div>
+    <h1>Customer's Information</h1>
+    <% for(var i = 0; i < Customer.length; i++){%>
+        <form method="post" action="/manage_customer">
+        <div class=username>
+            <label for="username">Username : </label>
+            <p> <%=Customer[i].customer_username%></p>
+            <label for="password">Password : </label>
+            <p> <%=Customer[i].customer_password%></p>
+            <label for="Address">Address : </label>
+            <p> <%=Customer[i].Address%></p>
+            <label for="email">Email : </label>
+            <p> <%=Customer[i].email%></p>
+        </div>
+        <br />
+    <a href="/edit_customer/<%= Customer[i].customer_id%>">Edit</a>
+    <a href="/delete_customer/<%= Customer[i].customer_id%>">Delete</a>
+    </form>
+    <br><br>
+    <%}%>
+        <center><a href="/menu_employee">Back to Menu</a></center>
+      </body>
+    </html>
