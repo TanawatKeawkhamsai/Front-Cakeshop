@@ -17,10 +17,13 @@
       <label>Password : 
       <input type="text" name="employee_password" id="employee_password" value="<%= Employee.employee_password%>" /></label>
       <br />
-      <label>Phone : 
-        <input type="text" name="phone" id="phone" value="<%= Employee.phone%>" /></label>
-        <br>
-      <center><input type="submit" value="Edit" /></center>
+      <label>Position : 
+        <input type="text" name="position" id="position" value="<%= Employee.position%>" /></label>
+        <br />
+      <label for="img">Image</label>
+        <input type="file" name="img" />
+        <br />
+        <input type="submit" value="Edit" />
     </form>
 
     <center><a href="/manage_employee">Back to List</a></center>

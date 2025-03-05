@@ -204,6 +204,7 @@ app.post("/Add_menu",upload.single("img"),async (req, res) => {
       cake_name: req.body.cake_name,
       cake_price: req.body.cake_price,
       cake_size: req.body.cake_size,
+      cake_status: req.body.cake_status,
       img: req.file.filename,
     };
     await axios.post(base_url + "/Cakes", data);
@@ -253,6 +254,7 @@ app.post("/edit_menu/:id",upload.single("img"),async (req, res) => {
       cake_name: req.body.cake_name,
       cake_price: req.body.cake_price,
       cake_size: req.body.cake_size,
+      cake_status: req.body.cake_status,
       img: req.file.filename,
     };
     await axios.put(base_url + "/Cake/" + req.params.id, data);
@@ -282,7 +284,8 @@ app.post("/Add_employee",upload.single("img"),async (req, res) => {
     const data = {
       employee_username: req.body.employee_username,
       employee_password: req.body.employee_password,
-      phone: req.body.phone,
+      position: req.body.position,
+      img: req.file.filename
     };
     await axios.post(base_url + "/Employees", data);
     res.redirect("/manage_employee");
@@ -371,7 +374,8 @@ app.post("/edit_employee/:id",async (req, res) => {
     const dataEmployee = {
       employee_username: req.body.employee_username,
       employee_password: req.body.employee_password,
-      phone: req.body.phone,
+      position: req.body.position,
+      img: req.file.filename
     };
     console.log(dataEmployee )
     await axios.put(base_url+"/Employee/"+req.params.id,dataEmployee);
