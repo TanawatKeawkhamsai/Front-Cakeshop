@@ -31,7 +31,6 @@
                 <div class="row" >
     
                     <% 
-                    // เรียงสินค้าที่หมดสต็อกให้อยู่ท้ายสุด
                     const sortedCakes = cakes.sort((a, b) => (a.cake_quantity === 0) - (b.cake_quantity === 0));
                     for (let i = 0; i < sortedCakes.length; i++) { 
                     %>
