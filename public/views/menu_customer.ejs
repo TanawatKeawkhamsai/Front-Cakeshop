@@ -28,35 +28,52 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <div class="row">
-                    
-                    <% for (let i = 0; i < cakes.length; i++) { %> <!-- เปลี่ยนจาก cake เป็น cakes -->
-                        <div class="col-lg-4 mb-4">
-                            <div class="card">
-                                <img src="/uploaded_img/cake/<%= cakes[i].img %>" alt="">
+                <div class="row" >
+    
+                    <% 
+                    // เรียงสินค้าที่หมดสต็อกให้อยู่ท้ายสุด
+                    const sortedCakes = cakes.sort((a, b) => (a.cake_quantity === 0) - (b.cake_quantity === 0));
+                    for (let i = 0; i < sortedCakes.length; i++) { 
+                    %>
+                        <div class="col-lg-4">
+                            <div class="card position-relative" ">
+                                <img src="/uploaded_img/cake/<%= sortedCakes[i].img %>" alt="">
+    
+                                <% if (sortedCakes[i].cake_quantity == 0) { %>
+                                    <div class="out-of-stock">
+                                        <h4>สินค้าหมด</h4>
+                                    </div>
+                                <% } %>
+    
                                 <div class="card-body">
                                     <form action="/menu_customer" method="post">
-                                        <h5 class="card-title"><%= cakes[i].cake_name %></h5> <!-- เปลี่ยนจาก cake[i] เป็น cakes[i] -->
-                                        <p class="card-text">Price: <%= cakes[i].cake_price %></p> <!-- เปลี่ยนจาก cake[i] เป็น cakes[i] -->
-                                        <p class="card-text"">Status: <%= cakes[i].cake_status %></p>
-                                        <input type="number" name="qty" class="qty form-control" min="1" max="99" value="1">
+                                        <h5 class="card-title"><%= sortedCakes[i].cake_name %></h5>
+                                        <p class="card-text">Price: <%= sortedCakes[i].cake_price %></p>
+                                        <p class="card-text" style="margin-top: -20px;">Status: <%= sortedCakes[i].cake_status %></p>
+                                        <p class="card-text" style="margin-top: -20px;">Quantity: <%= sortedCakes[i].cake_quantity %></p>
+                                        <input type="number" name="qty" class="qty form-control" min="1" 
+                                                max="<%= sortedCakes[i].cake_quantity %>" value="1" 
+                                                <%= sortedCakes[i].cake_quantity == 0 ? 'disabled' : '' %>>
                                         <br>
-
-                                        <input type="hidden" name="cake_name" value="<%= cakes[i].cake_name %>">
-                                        <input type="hidden" name="cake_price" value="<%= cakes[i].cake_price %>">
-
-                                        <div class="d-flex justify-content-center mt-2">
-                                            <button type="submit" class="btn-add-to-cart">Add to cart 🛒</button>
+    
+                                        <input type="hidden" name="cake_name" value="<%= sortedCakes[i].cake_name %>">
+                                        <input type="hidden" name="cake_price" value="<%= sortedCakes[i].cake_price %>">
+    
+                                        <div class="d-flex justify-content-center">
+                                            <button type="submit" class="btn-add-to-cart" 
+                                                    <%= sortedCakes[i].cake_quantity == 0 ? 'disabled' : '' %>> Add to cart 🛒
+                                            </button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
                         </div>
-                    <% } %>                    
+                    <% } %>  
                 </div>
             </div>
         </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </body>

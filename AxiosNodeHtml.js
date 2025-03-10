@@ -241,6 +241,7 @@ app.post("/Add_menu", upload.single("img"), async (req, res) => {
       cake_price: parseInt(req.body.cake_price),
       cake_size: req.body.cake_size,
       cake_status: req.body.cake_status,
+      cake_quantity: req.body.cake_quantity,
       img: req.file.filename,
       store_id: parseInt(req.body.store_id)
     }
@@ -305,6 +306,7 @@ app.post("/edit_menu/:id", upload.single("imgafter"), async (req, res) => {
       cake_price: req.body.cake_price,
       cake_size: req.body.cake_size,
       cake_status: req.body.cake_status,
+      cake_quantity: req.body.cake_quantity,
     };
 
     if (req.file) {
