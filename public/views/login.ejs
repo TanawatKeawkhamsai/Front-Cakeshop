@@ -16,6 +16,11 @@
                     <div class="card-header">
                         <center><h3>Login</h3></center>
                     </div>
+                    <% if (error) { %>
+                        <div class="alert alert-danger" role="alert">
+                            <%= error %>
+                        </div>
+                    <% } %>
                     <div class="card-body">
                         <form action="/login" method="post">
                             <div class="mb-3">

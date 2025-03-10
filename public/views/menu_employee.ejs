@@ -13,7 +13,9 @@
         <h1>🎂 CAKE SHOP 🍰</h1>
         <nav>
             <ul>
-                <li><a href="/Add_menu">Add Menu</a></li>
+                <li><a href="/menu_employee">menu</a></li>
+                <li><a href="/Order_details">Order detail</a></li>
+                <li><a href="/Add_menu">Add menu</a></li>
                 <li><a href="/manage_customer">Manage Customer</a></li>
                 <li><a href="/manage_employee">Manage Employee</a></li>
                 <li><a href="/logout">Log out</a></li>
@@ -33,15 +35,13 @@
                     <% for (let i = 0; i < cakes.length; i++) { %>
                         <div class="col-lg-4 mb-4">
                             <div class="card">
-                               <!--image cake-->
+                                <img src="/uploaded_img/cake/<%= cakes[i].img %>" alt="">
                                 <div class="card-body">
                                     <form action="/menu_employee" method="post">
                                         <h5 class="card-title" name="cake_name"><%= cakes[i].cake_name %></h5> 
                                         <p class="card-text" name="cake_price">Price: <%= cakes[i].cake_price %></p> 
                                         <p class="card-text" name="cake_status">Status: <%= cakes[i].cake_status %></p>
                                         <input type="hidden" name="cake_id" value="<%= cakes[i].cake_id %>"> 
-                                        <input type="number" name="qty" class="qty form-control" min="0" max="99" value="0">
-                                        <br>
                                         <div class="d-flex justify-content-center mt-2">
                                             <a href="/edit_menu/<%= cakes[i].cake_id %>"class="btn btn-warning mx-2">Edit 📝</a>
                                             <a href="/delete/<%= cakes[i].cake_id %>"class="btn btn-warning mx-2">Delete 🗑️</a>

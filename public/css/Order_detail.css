@@ -1,72 +1,75 @@
-/* รีเซ็ตค่าเริ่มต้นบางส่วน */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f9fa;
-    text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
+
+body{
+  font-family: "Anuphan", sans-serif;
+  font-style: normal;
 }
 
-h1 {
-    margin-top: 20px;
-    font-size: 28px;
-    color: #333;
+header {
+  background-color: #fed330;
+  color: black;
+  padding: 20px;
+  text-align: center;
 }
 
-.container {
-    width: 80%;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+
+
+.custom-button {
+    background-color: #fed330; /* สีน้ำตาล */
+    color: black; /* สีของตัวอักษร */
+    border: none; /* ไม่มีเส้นขอบ */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+    display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    margin: 4px 2px; /* ระยะห่างของขอบ */
+    cursor: pointer; /* ปลายเมาส์แสดงเป็นปุ่ม */
+    border-radius: 8px; /* มุมโค้งขอบ */
+  }
+
+  .card-header {
+    background-color: #fed330; /* กำหนดสีเหลืองให้กับพื้นหลัง */
+    color: black; /* กำหนดสีตัวอักษร */
+    padding: 10px; /* กำหนดขอบของพื้นหลัง */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    max-width: 85%; /* กำหนดความกว้างสูงสุดของ .card-header */
+    margin: 0 auto; /* จัดข้อความตรงกลาง */
     border-radius: 8px;
-}
+  }
 
-.order-box {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-bottom: 10px;
-}
+  .card-header h3 {
+    margin: 0; /* ลบระยะห่างขอบของ h3 */
+  }
 
-.order-box:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.order-info {
-    text-align: left;
-    flex-grow: 1;
-}
-
-.accept-btn {
-    text-decoration: none;
-    background-color: #ffc107;
-    color: #333;
-    padding: 8px 12px;
-    border-radius: 5px;
-    font-size: 14px;
+  .btn-add-to-cart {
+    background-color: #fed330;
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.accept-btn:hover {
-    background-color: #e0a800;
+.card img {
+  width: 100%; /* ให้ภาพเต็มความกว้างของการ์ด */
+  height: 300px; /* กำหนดความสูงคงที่ */
+  object-fit: cover; /* ปรับภาพให้เต็มพื้นที่โดยไม่เสียสัดส่วน */
 }
 
-.back-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.back-btn:hover {
-    background-color: #0056b3;
+.card-body {
+    border: 1px solid red;
 }

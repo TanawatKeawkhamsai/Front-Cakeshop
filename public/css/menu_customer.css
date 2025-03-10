@@ -63,3 +63,9 @@ nav ul li a {
     border-radius: 5px;
     cursor: pointer;
 }
+
+.card img {
+  width: 100%; /* ให้ภาพเต็มความกว้างของการ์ด */
+  height: 300px; /* กำหนดความสูงคงที่ */
+  object-fit: cover; /* ปรับภาพให้เต็มพื้นที่โดยไม่เสียสัดส่วน */
+}

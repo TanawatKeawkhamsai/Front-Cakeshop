@@ -1,118 +1,66 @@
-@import url("https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@100..700&display=swap');
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
+body{
   font-family: "Anuphan", sans-serif;
   font-style: normal;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  font-family: "Anuphan", sans-serif;
-  font-style: normal;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-  margin: 0;
-  padding: 0;
 }
 
 header {
-  color: #333;
-  text-align: center;
-  padding: 10px;
-}
-
-h1 {
-  font-size: 55px;
-}
-
-.reviews {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.reviews div {
-  text-align: center;
-  width: 250px;
-  margin: 20px;
-}
-
-.reviews img {
-  width: 100%;
-  border-radius: 50%;
-}
-
-.reviews h3,
-.reviews p {
-  margin: 10px 0;
-}
-
-section.reviews div {
-  display: flex;
-  text-align: center;
-  max-width: 800px;
-  overflow: hidden;
-  border: 2px solid #fed330; /* เพิ่ม border */
-  border-radius: 50px; /* เพิ่ม border-radius เพื่อทำให้มีเส้นมนสวยงาม */
-  margin-bottom: 40px;
+  background-color: #fed330;
+  color: black;
   padding: 20px;
-  background-color: #f9f9f9;
-  width: 20%; /* ลดความกว้างของกรอบสี่เหลี่ยม */
-  display: inline-block;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
   margin-right: 20px;
-  margin-left: 50px;
 }
 
-section.reviews .title {
-  margin-bottom: 20px;
+nav ul li a {
+  color: black;
+  text-decoration: none;
 }
 
-section.reviews .employee {
-  margin-bottom: 40px;
-  margin: 0 20px;
-  flex: 0 0 calc(33.33% - 40px);
+
+
+.custom-button {
+    background-color: #fed330; /* สีน้ำตาล */
+    color: black; /* สีของตัวอักษร */
+    border: none; /* ไม่มีเส้นขอบ */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    text-align: center; /* จัดข้อความตรงกลาง */
+    text-decoration: none; /* ไม่มีการเพิ่มเส้นใต้ข้อความ */
+    display: inline-block; /* แสดงเป็นบล็อกอินไลน์ */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    margin: 4px 2px; /* ระยะห่างของขอบ */
+    cursor: pointer; /* ปลายเมาส์แสดงเป็นปุ่ม */
+    border-radius: 8px; /* มุมโค้งขอบ */
+  }
+
+  .card-header {
+    background-color: #fed330; /* กำหนดสีเหลืองให้กับพื้นหลัง */
+    color: black; /* กำหนดสีตัวอักษร */
+    padding: 10px; /* กำหนดขอบของพื้นหลัง */
+    text-align: center; /* จัดข้อความกึ่งกลาง */
+    max-width: 85%; /* กำหนดความกว้างสูงสุดของ .card-header */
+    margin: 0 auto; /* จัดข้อความตรงกลาง */
+    border-radius: 8px;
+  }
+
+  .card-header h3 {
+    margin: 0; /* ลบระยะห่างขอบของ h3 */
+  }
+
+  .btn-add-to-cart {
+    background-color: #fed330;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-section.reviews div img {
-  width: 150px;
-  height: 150px;
-  border-radius: 75px;
-  margin-bottom: 10px;
-}
-
-section.reviews div h3,
-section.reviews div p {
-  margin: 0; /* เพิ่ม */
-  line-height: 1.6; /* เพิ่ม */
-  overflow: hidden; /* เพิ่ม */
-}
-
-section.box-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-top: 50px;
-  margin-right: 20px;
-  margin-left: 25px;
-}
-
-section.box-container .box {
-  width: 45%;
-  margin-bottom: 20px;
-}
-
-section.box-container .box h3 {
-  margin-bottom: 5px;
-}

@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Menu</title>
-    <link rel="stylesheet" href="../css/addmenu.css" />
+    <link rel="stylesheet" href="../css/edit_menu.css">
 </head>
 <body>
-    <br>
-    <div class="card-body">
-        <h5 class="card-title">Add Menu</h5>
+        <h1 class="card-title">Add Menu</h1>
         <div class="form-group" enctype="multipart/form-data">
             <form action="/Add_menu" method="post" enctype="multipart/form-data">
                 <label for="cake_name">Cake Name</label>
-                <input type="text" name="cake_name" placeholder="cake name" />
+                <input type="text" name="cake_name" placeholder="cake name" required/>
                 <br><br>
                 <label for="cake_price">Price</label>
                 <input type="text" class="form-control" name="cake_price" placeholder="price" pattern="[0-9]{1,7}" required >
@@ -22,15 +20,49 @@
                 <input type="text" class="form-control" name="cake_size" placeholder="size" pattern="[0-9]{1,7}" required >
                 <br><br>
                 <label for="cake_status">Status</label>
-                <input type="text" name="cake_status" placeholder="status" />
+                <input type="text" name="cake_status" placeholder="status" required/>
                 <br><br>
                 <label for="img">Image</label>
-                <input type="file" name="img">
+                <input type="file" name="img" required>
+                <br><br>
+                <label for="store_id">Store</label>
+                <select name="store_id" id="store_id" required>
+                    <option value="" disabled selected>Select Store</option>
+                    <% for (let i = 0; i < store.length; i++) { %>
+                    <option value="<%= store[i].store_id %>"><%= store[i].store_name %></option>
+                    <% } %>
+                </select>
+                <button type="button" style="margin-left: 20px;" id="addStoreBtn">Add New Store</button>
+                <br><br>
+
                 <input type="submit" value="OK">
             </form>
         </div>
-    </div>
-    <br>
     <center><a href="/menu_employee">Back to List</a></center>
+
+    <div id="addStoreModal" style="display: none;">
+        <h2>Add New Store</h2>
+        <form action="/add_new_store" method="post">
+            <label for="store_name">Store Name</label>
+            <input type="text" name="store_name" required />
+            <label for="store_address">Store address</label>
+            <input type="text" name="store_address" required />
+            <br><br>
+            <input type="submit" value="Add Store" />
+            <button type="button" class="btnBackpop" onclick="closeModal()">Cancel</button>
+        </form>
+    </div>
 </body>
 </html>
+
+<script>
+    document.getElementById('addStoreBtn').addEventListener('click', function() {
+        document.getElementById('addStoreModal').style.display = 'block';
+        document.getElementById('modalBackdrop').style.display = 'block'; 
+    });
+
+    function closeModal() {
+        document.getElementById('addStoreModal').style.display = 'none';
+        document.getElementById('modalBackdrop').style.display = 'none'; 
+    }
+</script>

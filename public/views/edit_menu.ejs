@@ -17,14 +17,23 @@
       <input type="text" name="cake_price" value="<%= Cake.cake_price%>" /></label>
       <br>
       <label>Size :
-        <input type="text" name="cake_size" value="<%= Cake.cake_size%>" /></label>
+        <input type="text" name="cake_size" value="<%= Cake.cake_size %>" /></label>
         <br>
       <label>Status :
         <input type="text" name="cake_status" value="<%= Cake.cake_status%>" /></label>
         <br>
-      <label for="img">Image</label>
-      <input type="file" name="img" />
+
+      <label>Current Image :</label>
+      <div>
+        <img src="/uploaded_img/cake/<%= Cake.img %>" alt="Current Cake Image" style="max-width: 200px; height: auto;" />
+        <input type="hidden" name="imgbefore" value="<%= Cake.img %>"/>
+      </div>
+      <br>
+
+      <label for="img">Change Image</label>
+      <input type="file" name="imgafter" />
       <br />
+
       <input type="submit" value="Edit" />
     </form>
     <br>

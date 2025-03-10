@@ -33,15 +33,18 @@
                     <% for (let i = 0; i < cakes.length; i++) { %> <!-- เปลี่ยนจาก cake เป็น cakes -->
                         <div class="col-lg-4 mb-4">
                             <div class="card">
-                               <!--image cake-->
+                                <img src="/uploaded_img/cake/<%= cakes[i].img %>" alt="">
                                 <div class="card-body">
                                     <form action="/menu_customer" method="post">
-                                        <h5 class="card-title" name="cake_name"><%= cakes[i].cake_name %></h5> <!-- เปลี่ยนจาก cake[i] เป็น cakes[i] -->
-                                        <p class="card-text" name="cake_price">Price: <%= cakes[i].cake_price %></p> <!-- เปลี่ยนจาก cake[i] เป็น cakes[i] -->
-                                        <p class="card-text" name="cake_status">Status: <%= cakes[i].cake_status %></p>
-                                        <input type="hidden" name="cake_id" value="<%= cakes[i].cake_id %>"> <!-- เปลี่ยนจาก cake[i] เป็น cakes[i] -->
-                                        <input type="number" name="qty" class="qty form-control" min="0" max="99" value="0">
+                                        <h5 class="card-title"><%= cakes[i].cake_name %></h5> <!-- เปลี่ยนจาก cake[i] เป็น cakes[i] -->
+                                        <p class="card-text">Price: <%= cakes[i].cake_price %></p> <!-- เปลี่ยนจาก cake[i] เป็น cakes[i] -->
+                                        <p class="card-text"">Status: <%= cakes[i].cake_status %></p>
+                                        <input type="number" name="qty" class="qty form-control" min="1" max="99" value="1">
                                         <br>
+
+                                        <input type="hidden" name="cake_name" value="<%= cakes[i].cake_name %>">
+                                        <input type="hidden" name="cake_price" value="<%= cakes[i].cake_price %>">
+
                                         <div class="d-flex justify-content-center mt-2">
                                             <button type="submit" class="btn-add-to-cart">Add to cart 🛒</button>
                                         </div>
