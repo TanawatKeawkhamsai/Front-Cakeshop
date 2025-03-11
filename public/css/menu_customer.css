@@ -3,10 +3,11 @@
 body{
   font-family: "Anuphan", sans-serif;
   font-style: normal;
+  background-color: #ececec;
 }
 
 header {
-  background-color: #fed330;
+  background-color: #f0b5d7;
   color: black;
   padding: 20px;
   text-align: center;
@@ -29,8 +30,8 @@ nav ul li a {
 
 
 .custom-button {
-    background-color: #fed330; /* สีน้ำตาล */
-    color: black; /* สีของตัวอักษร */
+    background-color: #ad1457; /* สีน้ำตาล */
+    color: white; /* สีของตัวอักษร */
     border: none; /* ไม่มีเส้นขอบ */
     padding: 10px 20px; /* ระยะห่างภายใน */
     text-align: center; /* จัดข้อความตรงกลาง */
@@ -43,7 +44,7 @@ nav ul li a {
   }
 
   .card-header {
-    background-color: #fed330; /* กำหนดสีเหลืองให้กับพื้นหลัง */
+    background-color: #ee72bb; /* กำหนดสีเหลืองให้กับพื้นหลัง */
     color: black; /* กำหนดสีตัวอักษร */
     padding: 10px; /* กำหนดขอบของพื้นหลัง */
     text-align: center; /* จัดข้อความกึ่งกลาง */
@@ -57,16 +58,17 @@ nav ul li a {
   }
 
   .btn-add-to-cart {
-    background-color: #fed330;
+    background-color: #b92264;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color: white;
 }
 
 .card img {
   width: 100%; /* ให้ภาพเต็มความกว้างของการ์ด */
-  height: 300px; /* กำหนดความสูงคงที่ */
+  height: 100%; /* กำหนดความสูงคงที่ */
   object-fit: cover; /* ปรับภาพให้เต็มพื้นที่โดยไม่เสียสัดส่วน */
 }
 

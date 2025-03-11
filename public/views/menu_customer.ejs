@@ -50,6 +50,8 @@
                                         <p class="card-text">Price: <%= sortedCakes[i].cake_price %></p>
                                         <p class="card-text" style="margin-top: -20px;">Status: <%= sortedCakes[i].cake_status %></p>
                                         <p class="card-text" style="margin-top: -20px;">Quantity: <%= sortedCakes[i].cake_quantity %></p>
+                                        <p class="card-text" style="margin-top: -20px;">Size: <%= sortedCakes[i].cake_size %></p>
+                                        
                                         <input type="number" name="qty" class="qty form-control" min="1" 
                                                 max="<%= sortedCakes[i].cake_quantity %>" value="1" 
                                                 <%= sortedCakes[i].cake_quantity == 0 ? 'disabled' : '' %>>

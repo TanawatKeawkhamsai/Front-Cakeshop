@@ -42,10 +42,22 @@
                                         <p class="card-text" name="cake_price">Price: <%= cakes[i].cake_price %></p> 
                                         <p class="card-text" name="cake_status" style="margin-top: -20px;">Status: <%= cakes[i].cake_status %></p>
                                         <p class="card-text" name="cake_status" style="margin-top: -20px;">Quantity: <%= cakes[i].cake_quantity %></p>
+                                        <p class="card-text" name="cake_status" style="margin-top: -20px;">Size: <%= cakes[i].cake_size %></p>
                                         <input type="hidden" name="cake_id" value="<%= cakes[i].cake_id %>"> 
                                         <div class="d-flex justify-content-center mt-2">
-                                            <a href="/edit_menu/<%= cakes[i].cake_id %>"class="btn btn-warning mx-2">Edit 📝</a>
-                                            <a href="/delete/<%= cakes[i].cake_id %>"class="btn btn-warning mx-2">Delete 🗑️</a>
+                                            <a href="/edit_menu/<%= cakes[i].cake_id %>" class="custom-link">
+                                                <button type="submit" class="custom-button">Edit 📝</button>
+                                            
+                                              <!--<input type="submit" value="Login" class="btn"/>-->
+                                              <!-- <button type="submit" class="custom-button">Log in</button> -->
+                                          </a>
+                                          <a href="/delete/<%= cakes[i].cake_id %>" class="custom-link">
+                                            <button type="submit" class="custom-button">Delete 🗑️</button>
+                                        
+                                          <!--<input type="submit" value="Login" class="btn"/>-->
+                                          <!-- <button type="submit" class="custom-button">Log in</button> -->
+                                      </a>
+                                            
                                         </div>
                                     </form>
                                 </div>
